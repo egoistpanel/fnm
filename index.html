@@ -160,11 +160,13 @@
     <script>
         const enter = document.getElementById("enter");
         const main = document.getElementById("main");
+        const audio = document.querySelector("audio");
 
         enter.addEventListener("click", function() {
             enter.style.display = "none";
             main.style.display = "flex";
             setTimeout(() => main.style.animation = "none", 1000);
+            audio.play();
             gtag('event', 'enter', { 'event_category': 'interaction' });
         });
     </script>
